@@ -12,9 +12,9 @@ app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
-// serve static frontend in production mode
+// serve static front end in production mode
 if (process.env.NODE_ENV === "production") {
-    app.use(express.static(path.join(__dirname, 'public', 'build')));
+    app.use(express.static(path.join(__dirname, 'client', 'build')));
 }
 
 // Controllers & Routes
